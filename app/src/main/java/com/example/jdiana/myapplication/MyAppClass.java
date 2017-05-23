@@ -1,22 +1,21 @@
 package com.example.jdiana.myapplication;
 
-import android.content.Context;
-
-import com.squareup.picasso.Picasso;
+import com.google.common.collect.ImmutableSet;
 
 public class MyAppClass {
-    private Context mContext;
-    private Picasso mPicasso;
-
-    public MyAppClass(Context context) {
-        mContext = context;
-    }
+    private static final ImmutableSet<String> COLOR_NAMES = ImmutableSet.of(
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "purple");
 
     public void doSomething() {
-        mPicasso = new Picasso.Builder(mContext).build();
+        System.out.println("Something!");
     }
 
     public void doSomethingElse() {
-        mPicasso.shutdown();
+        System.out.println("Something else.");
     }
 }
